@@ -1,0 +1,39 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Readme.md</title><style></style></head><body id="preview">
+<h1 class="code-line" data-line-start=0 data-line-end=1><a id="The_Rcode_is_created_for_the_paper_0"></a>The R-code is created for the paper</h1>
+<h2 class="code-line" data-line-start=2 data-line-end=3><a id="Evaluation_of_the_classification_of_presolar_silicon_carbide_grains_using_consensus_clustering_with_resampling_methods_an_assessment_of_the_confidence_of_grain_assignments_2"></a>Evaluation of the classification of presolar silicon carbide grains using consensus clustering with resampling methods: an assessment of the confidence of grain assignments</h2>
+<p class="has-line-data" data-line-start="3" data-line-end="4">Grethe Hystad^1, Asmaa Boujibar^2, Nan Liu^3, Larry R. Nittler^2, and Robert M. Hazen^2</p>
+<p class="has-line-data" data-line-start="5" data-line-end="8"><em>1.Department of Mathematics and Statistics, Purdue University Northwest, 2200 169th Street Hammond, IN 46323-2094, U.S.A.</em><br>
+<em>2.Earth and Planets Laboratory, Carnegie Institution for Science, 5251 Broad Branch Rd, NW, Washington, DC 20015, U.S.A.</em><br>
+<em>3.Department of Physics, Washington University in St. Louis, One Brookings Drive, St. Louis, MO 63130, U.S.A.</em></p>
+<p class="has-line-data" data-line-start="9" data-line-end="10">The paper is using several consensus clustering methods:</p>
+<p class="has-line-data" data-line-start="11" data-line-end="15">BagClust 1 and BagClust 2 are based on the algorithm provided in the paper<br>
+Dudoit, S and Fridlyand, J (2003) Bagging to improve the accuracy of a clustering procedure.<br>
+Bioinformatics 19: 1090-1099<br>
+<a href="https://academic.oup.com/bioinformatics/article/19/9/1090/284978">https://academic.oup.com/bioinformatics/article/19/9/1090/284978</a></p>
+<p class="has-line-data" data-line-start="16" data-line-end="20">Core Cluster Identification method is based on the paper by<br>
+Henelius, A; Puolamäki, K; Boström, H; and Papapetrou, P (2016)<br>
+Clustering with Confidence: Finding Clusters with Statistical Guarantees.<br>
+arXiv: <a href="https://arxiv.org/abs/1612.08714">https://arxiv.org/abs/1612.08714</a></p>
+<p class="has-line-data" data-line-start="21" data-line-end="25">Jaccard Similarity Coefficient for testing stability of clusters is based on the paper by<br>
+Hennig, C (2007) Cluster-wise assessment of cluster stability.<br>
+Computational Statistics &amp; Data Analysis 52:258-271<br>
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S0167947306004622?via%3Dihub">https://www.sciencedirect.com/science/article/abs/pii/S0167947306004622?via%3Dihub</a></p>
+<p class="has-line-data" data-line-start="26" data-line-end="27">The paper is using spectral clustering, clustering with a mixture of normal distributions, and clustering with a mixture of t-distributions.</p>
+<p class="has-line-data" data-line-start="28" data-line-end="29">I here provide the R-code for using spectral clustering with seven clusters and clustering with a mixture of normal distributions using nine clusters.</p>
+<p class="has-line-data" data-line-start="30" data-line-end="31">In order to obtain the results for clustering with a mixture of t-distributions using seven clusters, replace the clustering methods with</p>
+<p class="has-line-data" data-line-start="32" data-line-end="34">base=teigen(data3[c(9:12)],models=“UUUU”,Gs=ncluster, scale=FALSE, parallel.cores=TRUE)<br>
+base$classification</p>
+<p class="has-line-data" data-line-start="35" data-line-end="39">The data used for the paper are from the database PGD_SiC_2020-01-30<br>
+Reference for database:<br>
+Stephan, T.; Bose, M; and Boujibar, A et al., The presolar grain database reloaded - Silicon Carbide, Lunar and Planetary Science Conference, 2020, Abstract #2140<br>
+<a href="https://presolar.physics.wustl.edu/presolar-grain-database/">https://presolar.physics.wustl.edu/presolar-grain-database/</a></p>
+<p class="has-line-data" data-line-start="40" data-line-end="41">The application is released under GNU GPL version 3 license, noting that the following R-libraries and websites are licensed as follows:</p>
+<p class="has-line-data" data-line-start="42" data-line-end="50">mclust: GPL-2, GPL-3 (expanded from GPL-2)<br>
+RcppHungarian: GPL-2, GPL-3 (expanded from GPL-2)<br>
+teigen: GPL ≥ 2<br>
+kknn: GPL ≥ 2<br>
+cluster: GPL ≥ 2<br>
+dplyr: MIT<br>
+ggplot2: MIT<br>
+R-bloggers: MIT or Apache Licenses</p>
+</body></html>
