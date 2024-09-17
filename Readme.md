@@ -48,3 +48,5 @@ cluster: GPL ≥ 2
 dplyr: MIT
 ggplot2: MIT
 R-bloggers: MIT or Apache Licenses
+
+Cite the code: [![DOI](https://zenodo.org/badge/373536377.svg)](https://zenodo.org/doi/10.5281/zenodo.13773052)
